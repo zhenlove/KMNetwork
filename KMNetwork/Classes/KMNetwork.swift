@@ -9,11 +9,11 @@
 import Foundation
 import Alamofire
 
-typealias KMURLRquestSucess = (_ response:HTTPURLResponse? ,_ reuslt : Dictionary<String, Any>? )-> Void
-typealias KMURLRquestFailure = (_ response:HTTPURLResponse? ,_ error:Error?)-> Void
+ public typealias KMURLRquestSucess = (_ response:HTTPURLResponse? ,_ reuslt : Dictionary<String, Any>? )-> Void
+ public typealias KMURLRquestFailure = (_ response:HTTPURLResponse? ,_ error:Error?)-> Void
 
 @objc(KMNetwork)
-class KMNetwork: NSObject {
+open class KMNetwork: NSObject {
      static var sessionManager: SessionManager = {
         let tSessionManager = SessionManager.default
         tSessionManager.adapter = KMAdapter()
@@ -25,7 +25,7 @@ class KMNetwork: NSObject {
 @objc
 extension KMNetwork {
 
-    static func request(url:String,
+    @objc public static func request(url:String,
                         method:String,
                         parameters:[String: Any]?,
                         isHttpBody:Bool,
