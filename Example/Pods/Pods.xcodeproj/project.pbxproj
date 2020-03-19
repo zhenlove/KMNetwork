@@ -1,0 +1,960 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		00808122820CCB7D640A23AF2F851D96 /* Notifications.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99001E4EFEE51721C4239899620F7A4F /* Notifications.swift */; };
+		1AAB4E66BB2F67D75ED31A969FB90445 /* Alamofire-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 6FC330FE882F43FCD3619AC81CC2E89F /* Alamofire-dummy.m */; };
+		2CFB7E4AB44C35953034CE00C927B1F8 /* Response.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC2AE8DE282605880777A7644774757D /* Response.swift */; };
+		3E82C4D5935E02D385D773C59D424ADD /* Validation.swift in Sources */ = {isa = PBXBuildFile; fileRef = B22C230E562AEE38A1E0F08D4BBDB251 /* Validation.swift */; };
+		41020D7743021D630425427F1EC8273C /* KMRetrier.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD274A50FF50D6B2AA890A2C7C764701 /* KMRetrier.swift */; };
+		494BF218C4F917D55808751F21518F3F /* ResponseSerialization.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A25DED73F4B23BAFEFEBA061E08D603 /* ResponseSerialization.swift */; };
+		4A725B938740571970E16219327BC598 /* KMNetwork-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 1FE9DB5844EBF264E7D1AECADA3F4CFC /* KMNetwork-dummy.m */; };
+		51882AB1BF2D64307CB26E25DB7A43C2 /* ServerTrustPolicy.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD2FE5405D4726D85021583D4863F681 /* ServerTrustPolicy.swift */; };
+		5CEDE47F361B82CAEF4193331BF40E2A /* Pods-KMNetwork_Tests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = F91C5A70F374E97706ABA034EEE72670 /* Pods-KMNetwork_Tests-dummy.m */; };
+		626863FBB1F3C943ACB548FFB7A85E8C /* Timeline.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E9F912E9521661D84C1EE4FB9B63FB3 /* Timeline.swift */; };
+		6853624E43A5EB0CA069A0F55C3C315C /* NetworkReachabilityManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F927526C087E1E364A91DDEC7010F73 /* NetworkReachabilityManager.swift */; };
+		6A386F883B6F86FCA792C8C1134057CA /* Result.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6D6E0BF49472BD1B73C85173BAA18A0 /* Result.swift */; };
+		723DD8C66EBDA87C25F858D3AA1FF4FD /* KMNetwork.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607A2AF84F544E1C09C831B3B9DD27CF /* KMNetwork.swift */; };
+		8310901E730FB822677EDAAF25893BE6 /* DispatchQueue+Alamofire.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0E5535D7F3EDE66260F71C1D4F66844 /* DispatchQueue+Alamofire.swift */; };
+		86BDAE2E25F1D209E0C5B42BA1A26FE7 /* KMNetworkConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62C3FA33C34AFACF898A0CB53BD352B6 /* KMNetworkConfig.swift */; };
+		8D7002BA4BF48E276D34405B85D636DC /* AFError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C80AB219D096FC56BEED036956B9C3F /* AFError.swift */; };
+		8EDF6F99E39B50EBD11C5F0E1D2BFA23 /* KMNetwork-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 8960DA008E83A943BA469D9E72ADBA67 /* KMNetwork-umbrella.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		9CF692BD464C27BA082BE1DCA7A9D45C /* Alamofire-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = AA0D9F7BEA276FCB1F3B853C798200A7 /* Alamofire-umbrella.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		ABCE1A00702216808463289CDED3EFEE /* Pods-KMNetwork_Example-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 23DFC890C36CBA0DC36D61F38019DA07 /* Pods-KMNetwork_Example-umbrella.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		AC03817B7838E07BC3B47FD617291333 /* KMAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = B07654D278E948169B1D2633BB02344C /* KMAdapter.swift */; };
+		ACA49CD6B7FC1F24FD2CB74D87FD7475 /* CustomExtensioon.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54A407CCC0F78930A24FCCDBABDD715E /* CustomExtensioon.swift */; };
+		AF02EA0DAD3FAC51CB5E859F81786EC6 /* SessionDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32EAF7A6E03AA8319D771CCA675F25AC /* SessionDelegate.swift */; };
+		B422DCB989FF675D287C579D280F8253 /* TaskDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 402FB21CB94E492F0FE2D166DB422734 /* TaskDelegate.swift */; };
+		B560A089A1D47EC1F0B26533258C7317 /* SessionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69B358C874596CCEFA86E5B49D175EED /* SessionManager.swift */; };
+		C2EB4CB575EA9821E30A317574865D17 /* MultipartFormData.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF297F2D74D0C0C7BF063D6CCAB1A5A3 /* MultipartFormData.swift */; };
+		D8524A5C842C0580F42718FE94C8F791 /* Alamofire.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2467645A8B1AC6F6D2275D436880FC89 /* Alamofire.swift */; };
+		EB3221EFB2D41068A47B6B12CC15302B /* Pods-KMNetwork_Example-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C52C11813314092D139F37CA8237900 /* Pods-KMNetwork_Example-dummy.m */; };
+		F9F08CA61836853CAE7455D76939D98B /* ParameterEncoding.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7DB0A091FB90D58209D19132453DA4E /* ParameterEncoding.swift */; };
+		FF31B5BBE13193F204040DE66FF15F02 /* Request.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CEA1FD68563C12C74BE69784E4B44B7 /* Request.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		228D4571D05DA19F77F1CA660274EA84 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = EAAA1AD3A8A1B59AB91319EE40752C6D;
+			remoteInfo = Alamofire;
+		};
+		829461E6729A2820354F4B0761C841A2 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 81F65A3C22716EEA9D6CD7203246036E;
+			remoteInfo = KMNetwork;
+		};
+		F6381613A4E6D346AFFF5D3223D26AB9 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = EAAA1AD3A8A1B59AB91319EE40752C6D;
+			remoteInfo = Alamofire;
+		};
+		FBDBAE54B0A532D7D7DF36AA2027A52B /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 44C17E67771E57AD78FD2F043AA09E1D;
+			remoteInfo = "Pods-KMNetwork_Example";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		00A2123407A87BD8E64E4150F3169D06 /* Pods-KMNetwork_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-KMNetwork_Tests.release.xcconfig"; sourceTree = "<group>"; };
+		0C52C11813314092D139F37CA8237900 /* Pods-KMNetwork_Example-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-KMNetwork_Example-dummy.m"; sourceTree = "<group>"; };
+		0E646479F0836DD27B6912D1642A5442 /* KMNetwork-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "KMNetwork-prefix.pch"; sourceTree = "<group>"; };
+		17EBECE4D10E03360D3E37B4FF83EDC8 /* Pods-KMNetwork_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-KMNetwork_Tests.debug.xcconfig"; sourceTree = "<group>"; };
+		1FE9DB5844EBF264E7D1AECADA3F4CFC /* KMNetwork-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "KMNetwork-dummy.m"; sourceTree = "<group>"; };
+		22055F3EEC8D56CADB82B4B16295F88C /* libPods-KMNetwork_Tests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; name = "libPods-KMNetwork_Tests.a"; path = "libPods-KMNetwork_Tests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		23DFC890C36CBA0DC36D61F38019DA07 /* Pods-KMNetwork_Example-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-KMNetwork_Example-umbrella.h"; sourceTree = "<group>"; };
+		2467645A8B1AC6F6D2275D436880FC89 /* Alamofire.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Alamofire.swift; path = Source/Alamofire.swift; sourceTree = "<group>"; };
+		2FD3A8B1E3DF3C15066BE8318A3E463F /* KMNetwork.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = KMNetwork.modulemap; sourceTree = "<group>"; };
+		32EAF7A6E03AA8319D771CCA675F25AC /* SessionDelegate.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SessionDelegate.swift; path = Source/SessionDelegate.swift; sourceTree = "<group>"; };
+		3A25DED73F4B23BAFEFEBA061E08D603 /* ResponseSerialization.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ResponseSerialization.swift; path = Source/ResponseSerialization.swift; sourceTree = "<group>"; };
+		3BCB3C8A358AFD96690CE30779B69A6D /* Pods-KMNetwork_Tests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-KMNetwork_Tests-acknowledgements.plist"; sourceTree = "<group>"; };
+		402FB21CB94E492F0FE2D166DB422734 /* TaskDelegate.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = TaskDelegate.swift; path = Source/TaskDelegate.swift; sourceTree = "<group>"; };
+		44122E00702BAD0CBBCC24FCC3A12ABB /* Alamofire.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = Alamofire.modulemap; sourceTree = "<group>"; };
+		4F927526C087E1E364A91DDEC7010F73 /* NetworkReachabilityManager.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = NetworkReachabilityManager.swift; path = Source/NetworkReachabilityManager.swift; sourceTree = "<group>"; };
+		54A407CCC0F78930A24FCCDBABDD715E /* CustomExtensioon.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CustomExtensioon.swift; path = KMNetwork/Classes/CustomExtensioon.swift; sourceTree = "<group>"; };
+		5C80AB219D096FC56BEED036956B9C3F /* AFError.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = AFError.swift; path = Source/AFError.swift; sourceTree = "<group>"; };
+		5D797E9A5C5782CE845840781FA1CC81 /* libAlamofire.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; name = libAlamofire.a; path = libAlamofire.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		5E9F912E9521661D84C1EE4FB9B63FB3 /* Timeline.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Timeline.swift; path = Source/Timeline.swift; sourceTree = "<group>"; };
+		607A2AF84F544E1C09C831B3B9DD27CF /* KMNetwork.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = KMNetwork.swift; path = KMNetwork/Classes/KMNetwork.swift; sourceTree = "<group>"; };
+		62C3FA33C34AFACF898A0CB53BD352B6 /* KMNetworkConfig.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = KMNetworkConfig.swift; path = KMNetwork/Classes/KMNetworkConfig.swift; sourceTree = "<group>"; };
+		69B358C874596CCEFA86E5B49D175EED /* SessionManager.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SessionManager.swift; path = Source/SessionManager.swift; sourceTree = "<group>"; };
+		6F7FB31564029B660220FEB4BAFAA791 /* libPods-KMNetwork_Example.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; name = "libPods-KMNetwork_Example.a"; path = "libPods-KMNetwork_Example.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		6FC330FE882F43FCD3619AC81CC2E89F /* Alamofire-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Alamofire-dummy.m"; sourceTree = "<group>"; };
+		702F7A186452805C0DAB42D3F49F0D38 /* KMNetwork.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = KMNetwork.xcconfig; sourceTree = "<group>"; };
+		81412F8FE7B3D9429636B00F40E0DA87 /* Alamofire.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = Alamofire.xcconfig; sourceTree = "<group>"; };
+		8960DA008E83A943BA469D9E72ADBA67 /* KMNetwork-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "KMNetwork-umbrella.h"; sourceTree = "<group>"; };
+		8A2CF0D35B6FF7AFBD49520E467B9762 /* libKMNetwork.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; name = libKMNetwork.a; path = libKMNetwork.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		8B5B3B30925BBFA34075ED9DD5E58900 /* Pods-KMNetwork_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-KMNetwork_Example.debug.xcconfig"; sourceTree = "<group>"; };
+		8CEA1FD68563C12C74BE69784E4B44B7 /* Request.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Request.swift; path = Source/Request.swift; sourceTree = "<group>"; };
+		99001E4EFEE51721C4239899620F7A4F /* Notifications.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Notifications.swift; path = Source/Notifications.swift; sourceTree = "<group>"; };
+		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		9DAE29898BF7D27D261C9D9A8612927A /* Pods-KMNetwork_Example.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-KMNetwork_Example.modulemap"; sourceTree = "<group>"; };
+		9E2B3BC5D05B0347CB4ED6BBAD3A365D /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; path = LICENSE; sourceTree = "<group>"; };
+		A6D6E0BF49472BD1B73C85173BAA18A0 /* Result.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Result.swift; path = Source/Result.swift; sourceTree = "<group>"; };
+		AA0D9F7BEA276FCB1F3B853C798200A7 /* Alamofire-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Alamofire-umbrella.h"; sourceTree = "<group>"; };
+		B07654D278E948169B1D2633BB02344C /* KMAdapter.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = KMAdapter.swift; path = KMNetwork/Classes/KMAdapter.swift; sourceTree = "<group>"; };
+		B22C230E562AEE38A1E0F08D4BBDB251 /* Validation.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Validation.swift; path = Source/Validation.swift; sourceTree = "<group>"; };
+		BD274A50FF50D6B2AA890A2C7C764701 /* KMRetrier.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = KMRetrier.swift; path = KMNetwork/Classes/KMRetrier.swift; sourceTree = "<group>"; };
+		BF297F2D74D0C0C7BF063D6CCAB1A5A3 /* MultipartFormData.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = MultipartFormData.swift; path = Source/MultipartFormData.swift; sourceTree = "<group>"; };
+		CD02CA6408EB09C52127CED45E0E8C66 /* Pods-KMNetwork_Tests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-KMNetwork_Tests-acknowledgements.markdown"; sourceTree = "<group>"; };
+		CD2FE5405D4726D85021583D4863F681 /* ServerTrustPolicy.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ServerTrustPolicy.swift; path = Source/ServerTrustPolicy.swift; sourceTree = "<group>"; };
+		D801AF3088DFCB4AF9430EBA599D0EF9 /* Pods-KMNetwork_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-KMNetwork_Example.release.xcconfig"; sourceTree = "<group>"; };
+		DE908C8F61491EFC9D1C3ECE5639B007 /* Pods-KMNetwork_Example-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-KMNetwork_Example-acknowledgements.plist"; sourceTree = "<group>"; };
+		E3D4D2E6EE3F2D02CE1ED8AEBBBCCE6F /* Pods-KMNetwork_Example-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-KMNetwork_Example-acknowledgements.markdown"; sourceTree = "<group>"; };
+		E4DA95AC28D9A7D09868ACC300D21757 /* KMNetwork.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; path = KMNetwork.podspec; sourceTree = "<group>"; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		E4FAE3F085917C74A1F9F7ADC2F6FE9E /* Alamofire-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Alamofire-prefix.pch"; sourceTree = "<group>"; };
+		E7DB0A091FB90D58209D19132453DA4E /* ParameterEncoding.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ParameterEncoding.swift; path = Source/ParameterEncoding.swift; sourceTree = "<group>"; };
+		EC2AE8DE282605880777A7644774757D /* Response.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Response.swift; path = Source/Response.swift; sourceTree = "<group>"; };
+		F0E5535D7F3EDE66260F71C1D4F66844 /* DispatchQueue+Alamofire.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "DispatchQueue+Alamofire.swift"; path = "Source/DispatchQueue+Alamofire.swift"; sourceTree = "<group>"; };
+		F61F3B1F2E53F47D3D18F1993759F0CE /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; path = README.md; sourceTree = "<group>"; };
+		F91C5A70F374E97706ABA034EEE72670 /* Pods-KMNetwork_Tests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-KMNetwork_Tests-dummy.m"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		07C7603FFA3CB8DF7695C09A4C85DE4B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1CFA4A342F58ED65B89EA630C4170443 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1F2FF383FA75D312D412EE1B3DCCFEB0 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B8D39FFFCDF99BCBC4F159D17652A698 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		20512472AE89EDF3B8DADDB65D11D1E7 /* Pod */ = {
+			isa = PBXGroup;
+			children = (
+				E4DA95AC28D9A7D09868ACC300D21757 /* KMNetwork.podspec */,
+				9E2B3BC5D05B0347CB4ED6BBAD3A365D /* LICENSE */,
+				F61F3B1F2E53F47D3D18F1993759F0CE /* README.md */,
+			);
+			name = Pod;
+			sourceTree = "<group>";
+		};
+		213F07082E22EDDD7D7284B5CE06AA86 /* Pods-KMNetwork_Tests */ = {
+			isa = PBXGroup;
+			children = (
+				CD02CA6408EB09C52127CED45E0E8C66 /* Pods-KMNetwork_Tests-acknowledgements.markdown */,
+				3BCB3C8A358AFD96690CE30779B69A6D /* Pods-KMNetwork_Tests-acknowledgements.plist */,
+				F91C5A70F374E97706ABA034EEE72670 /* Pods-KMNetwork_Tests-dummy.m */,
+				17EBECE4D10E03360D3E37B4FF83EDC8 /* Pods-KMNetwork_Tests.debug.xcconfig */,
+				00A2123407A87BD8E64E4150F3169D06 /* Pods-KMNetwork_Tests.release.xcconfig */,
+			);
+			name = "Pods-KMNetwork_Tests";
+			path = "Target Support Files/Pods-KMNetwork_Tests";
+			sourceTree = "<group>";
+		};
+		2CD9504E7D92FE0BCB6CFCD7C6A13248 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				44122E00702BAD0CBBCC24FCC3A12ABB /* Alamofire.modulemap */,
+				81412F8FE7B3D9429636B00F40E0DA87 /* Alamofire.xcconfig */,
+				6FC330FE882F43FCD3619AC81CC2E89F /* Alamofire-dummy.m */,
+				E4FAE3F085917C74A1F9F7ADC2F6FE9E /* Alamofire-prefix.pch */,
+				AA0D9F7BEA276FCB1F3B853C798200A7 /* Alamofire-umbrella.h */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/Alamofire";
+			sourceTree = "<group>";
+		};
+		5BC3ED104F4B322CF0AC269BD6722A9F /* Alamofire */ = {
+			isa = PBXGroup;
+			children = (
+				5C80AB219D096FC56BEED036956B9C3F /* AFError.swift */,
+				2467645A8B1AC6F6D2275D436880FC89 /* Alamofire.swift */,
+				F0E5535D7F3EDE66260F71C1D4F66844 /* DispatchQueue+Alamofire.swift */,
+				BF297F2D74D0C0C7BF063D6CCAB1A5A3 /* MultipartFormData.swift */,
+				4F927526C087E1E364A91DDEC7010F73 /* NetworkReachabilityManager.swift */,
+				99001E4EFEE51721C4239899620F7A4F /* Notifications.swift */,
+				E7DB0A091FB90D58209D19132453DA4E /* ParameterEncoding.swift */,
+				8CEA1FD68563C12C74BE69784E4B44B7 /* Request.swift */,
+				EC2AE8DE282605880777A7644774757D /* Response.swift */,
+				3A25DED73F4B23BAFEFEBA061E08D603 /* ResponseSerialization.swift */,
+				A6D6E0BF49472BD1B73C85173BAA18A0 /* Result.swift */,
+				CD2FE5405D4726D85021583D4863F681 /* ServerTrustPolicy.swift */,
+				32EAF7A6E03AA8319D771CCA675F25AC /* SessionDelegate.swift */,
+				69B358C874596CCEFA86E5B49D175EED /* SessionManager.swift */,
+				402FB21CB94E492F0FE2D166DB422734 /* TaskDelegate.swift */,
+				5E9F912E9521661D84C1EE4FB9B63FB3 /* Timeline.swift */,
+				B22C230E562AEE38A1E0F08D4BBDB251 /* Validation.swift */,
+				2CD9504E7D92FE0BCB6CFCD7C6A13248 /* Support Files */,
+			);
+			name = Alamofire;
+			path = Alamofire;
+			sourceTree = "<group>";
+		};
+		77C80AD0684F9397B9099479A085AFA0 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				5D797E9A5C5782CE845840781FA1CC81 /* libAlamofire.a */,
+				8A2CF0D35B6FF7AFBD49520E467B9762 /* libKMNetwork.a */,
+				6F7FB31564029B660220FEB4BAFAA791 /* libPods-KMNetwork_Example.a */,
+				22055F3EEC8D56CADB82B4B16295F88C /* libPods-KMNetwork_Tests.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		90FDDC7F5D24472360CA259A8D40AE98 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				5BC3ED104F4B322CF0AC269BD6722A9F /* Alamofire */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		98016DB1AD047A1798F0BF1D74F01BA4 /* KMNetwork */ = {
+			isa = PBXGroup;
+			children = (
+				54A407CCC0F78930A24FCCDBABDD715E /* CustomExtensioon.swift */,
+				B07654D278E948169B1D2633BB02344C /* KMAdapter.swift */,
+				607A2AF84F544E1C09C831B3B9DD27CF /* KMNetwork.swift */,
+				62C3FA33C34AFACF898A0CB53BD352B6 /* KMNetworkConfig.swift */,
+				BD274A50FF50D6B2AA890A2C7C764701 /* KMRetrier.swift */,
+				20512472AE89EDF3B8DADDB65D11D1E7 /* Pod */,
+				E62A9662C8A3EC65FE86301E951DBA21 /* Support Files */,
+			);
+			name = KMNetwork;
+			path = ../..;
+			sourceTree = "<group>";
+		};
+		CF1408CF629C7361332E53B88F7BD30C = {
+			isa = PBXGroup;
+			children = (
+				9D940727FF8FB9C785EB98E56350EF41 /* Podfile */,
+				F231ADBE60CA950A83044BF913901033 /* Development Pods */,
+				D89477F20FB1DE18A04690586D7808C4 /* Frameworks */,
+				90FDDC7F5D24472360CA259A8D40AE98 /* Pods */,
+				77C80AD0684F9397B9099479A085AFA0 /* Products */,
+				FD8705BBCFF0F313724241BA06330DDF /* Targets Support Files */,
+			);
+			sourceTree = "<group>";
+		};
+		D89477F20FB1DE18A04690586D7808C4 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		E62A9662C8A3EC65FE86301E951DBA21 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				2FD3A8B1E3DF3C15066BE8318A3E463F /* KMNetwork.modulemap */,
+				702F7A186452805C0DAB42D3F49F0D38 /* KMNetwork.xcconfig */,
+				1FE9DB5844EBF264E7D1AECADA3F4CFC /* KMNetwork-dummy.m */,
+				0E646479F0836DD27B6912D1642A5442 /* KMNetwork-prefix.pch */,
+				8960DA008E83A943BA469D9E72ADBA67 /* KMNetwork-umbrella.h */,
+			);
+			name = "Support Files";
+			path = "Example/Pods/Target Support Files/KMNetwork";
+			sourceTree = "<group>";
+		};
+		EF18C8261124FC868D65D2FB3682B843 /* Pods-KMNetwork_Example */ = {
+			isa = PBXGroup;
+			children = (
+				9DAE29898BF7D27D261C9D9A8612927A /* Pods-KMNetwork_Example.modulemap */,
+				E3D4D2E6EE3F2D02CE1ED8AEBBBCCE6F /* Pods-KMNetwork_Example-acknowledgements.markdown */,
+				DE908C8F61491EFC9D1C3ECE5639B007 /* Pods-KMNetwork_Example-acknowledgements.plist */,
+				0C52C11813314092D139F37CA8237900 /* Pods-KMNetwork_Example-dummy.m */,
+				23DFC890C36CBA0DC36D61F38019DA07 /* Pods-KMNetwork_Example-umbrella.h */,
+				8B5B3B30925BBFA34075ED9DD5E58900 /* Pods-KMNetwork_Example.debug.xcconfig */,
+				D801AF3088DFCB4AF9430EBA599D0EF9 /* Pods-KMNetwork_Example.release.xcconfig */,
+			);
+			name = "Pods-KMNetwork_Example";
+			path = "Target Support Files/Pods-KMNetwork_Example";
+			sourceTree = "<group>";
+		};
+		F231ADBE60CA950A83044BF913901033 /* Development Pods */ = {
+			isa = PBXGroup;
+			children = (
+				98016DB1AD047A1798F0BF1D74F01BA4 /* KMNetwork */,
+			);
+			name = "Development Pods";
+			sourceTree = "<group>";
+		};
+		FD8705BBCFF0F313724241BA06330DDF /* Targets Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				EF18C8261124FC868D65D2FB3682B843 /* Pods-KMNetwork_Example */,
+				213F07082E22EDDD7D7284B5CE06AA86 /* Pods-KMNetwork_Tests */,
+			);
+			name = "Targets Support Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		2F11D78FFD8D0BE2AE64ABB1C67F258C /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8EDF6F99E39B50EBD11C5F0E1D2BFA23 /* KMNetwork-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		46A6C42A13B1E35DA91189E2AE4A88E6 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				ABCE1A00702216808463289CDED3EFEE /* Pods-KMNetwork_Example-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DA327FA8288BD9E808AD950153D6638C /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9CF692BD464C27BA082BE1DCA7A9D45C /* Alamofire-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EC7899A70C9A08310A17E87D7C6685D5 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		44C17E67771E57AD78FD2F043AA09E1D /* Pods-KMNetwork_Example */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 284FE5422B8EA95A2D541740656A86CD /* Build configuration list for PBXNativeTarget "Pods-KMNetwork_Example" */;
+			buildPhases = (
+				46A6C42A13B1E35DA91189E2AE4A88E6 /* Headers */,
+				F3BCB427C9F233FD2DBA6F64A8552BF0 /* Sources */,
+				1F2FF383FA75D312D412EE1B3DCCFEB0 /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				0DE59D11B3B9EDB9626233FC82C24576 /* PBXTargetDependency */,
+				AD7A920198B54C3750AAF1355C39BF2A /* PBXTargetDependency */,
+			);
+			name = "Pods-KMNetwork_Example";
+			productName = "Pods-KMNetwork_Example";
+			productReference = 6F7FB31564029B660220FEB4BAFAA791 /* libPods-KMNetwork_Example.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+		81F65A3C22716EEA9D6CD7203246036E /* KMNetwork */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 9674CE5BD9BBF98177CD04FCACF9014D /* Build configuration list for PBXNativeTarget "KMNetwork" */;
+			buildPhases = (
+				2F11D78FFD8D0BE2AE64ABB1C67F258C /* Headers */,
+				B3719419F23FDC118D6C48CE75560D82 /* Sources */,
+				B8D39FFFCDF99BCBC4F159D17652A698 /* Frameworks */,
+				6FC02CDE0BB042A9C66417AF31EA08F6 /* Copy generated compatibility header */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				76983338567DA7026DE6E38618D4BD7F /* PBXTargetDependency */,
+			);
+			name = KMNetwork;
+			productName = KMNetwork;
+			productReference = 8A2CF0D35B6FF7AFBD49520E467B9762 /* libKMNetwork.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+		D321905DB3587D5E2BD6B95E541E1C50 /* Pods-KMNetwork_Tests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 0F42AFE311C66F6A83A190D1D2205777 /* Build configuration list for PBXNativeTarget "Pods-KMNetwork_Tests" */;
+			buildPhases = (
+				EC7899A70C9A08310A17E87D7C6685D5 /* Headers */,
+				AEE055BD62FF83D9271D4BBDDB635890 /* Sources */,
+				1CFA4A342F58ED65B89EA630C4170443 /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				CBCDBFFC6E3E6939428A12F529470252 /* PBXTargetDependency */,
+			);
+			name = "Pods-KMNetwork_Tests";
+			productName = "Pods-KMNetwork_Tests";
+			productReference = 22055F3EEC8D56CADB82B4B16295F88C /* libPods-KMNetwork_Tests.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+		EAAA1AD3A8A1B59AB91319EE40752C6D /* Alamofire */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 20F50134A7EBE5BBF644BED665FB3400 /* Build configuration list for PBXNativeTarget "Alamofire" */;
+			buildPhases = (
+				DA327FA8288BD9E808AD950153D6638C /* Headers */,
+				ADA8A824FC0DF194C0EEA41A4A09871D /* Sources */,
+				07C7603FFA3CB8DF7695C09A4C85DE4B /* Frameworks */,
+				4F61BF6CCE774E66CD281745D52A182D /* Copy generated compatibility header */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Alamofire;
+			productName = Alamofire;
+			productReference = 5D797E9A5C5782CE845840781FA1CC81 /* libAlamofire.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		BFDFE7DC352907FC980B868725387E98 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1100;
+				LastUpgradeCheck = 1100;
+			};
+			buildConfigurationList = 4821239608C13582E20E6DA73FD5F1F9 /* Build configuration list for PBXProject "Pods" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = CF1408CF629C7361332E53B88F7BD30C;
+			productRefGroup = 77C80AD0684F9397B9099479A085AFA0 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				EAAA1AD3A8A1B59AB91319EE40752C6D /* Alamofire */,
+				81F65A3C22716EEA9D6CD7203246036E /* KMNetwork */,
+				44C17E67771E57AD78FD2F043AA09E1D /* Pods-KMNetwork_Example */,
+				D321905DB3587D5E2BD6B95E541E1C50 /* Pods-KMNetwork_Tests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		4F61BF6CCE774E66CD281745D52A182D /* Copy generated compatibility header */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${DERIVED_SOURCES_DIR}/${PRODUCT_MODULE_NAME}-Swift.h",
+				"${PODS_ROOT}/Headers/Public/Alamofire/Alamofire.modulemap",
+				"${PODS_ROOT}/Headers/Public/Alamofire/Alamofire-umbrella.h",
+			);
+			name = "Copy generated compatibility header";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"${BUILT_PRODUCTS_DIR}/${PRODUCT_MODULE_NAME}.modulemap",
+				"${BUILT_PRODUCTS_DIR}/Alamofire-umbrella.h",
+				"${BUILT_PRODUCTS_DIR}/Swift Compatibility Header/${PRODUCT_MODULE_NAME}-Swift.h",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "COMPATIBILITY_HEADER_PATH=\"${BUILT_PRODUCTS_DIR}/Swift Compatibility Header/${PRODUCT_MODULE_NAME}-Swift.h\"\nMODULE_MAP_PATH=\"${BUILT_PRODUCTS_DIR}/${PRODUCT_MODULE_NAME}.modulemap\"\n\nditto \"${DERIVED_SOURCES_DIR}/${PRODUCT_MODULE_NAME}-Swift.h\" \"${COMPATIBILITY_HEADER_PATH}\"\nditto \"${PODS_ROOT}/Headers/Public/Alamofire/Alamofire.modulemap\" \"${MODULE_MAP_PATH}\"\nditto \"${PODS_ROOT}/Headers/Public/Alamofire/Alamofire-umbrella.h\" \"${BUILT_PRODUCTS_DIR}\"\nprintf \"\\n\\nmodule ${PRODUCT_MODULE_NAME}.Swift {\\n  header \\\"${COMPATIBILITY_HEADER_PATH}\\\"\\n  requires objc\\n}\\n\" >> \"${MODULE_MAP_PATH}\"\n";
+		};
+		6FC02CDE0BB042A9C66417AF31EA08F6 /* Copy generated compatibility header */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${DERIVED_SOURCES_DIR}/${PRODUCT_MODULE_NAME}-Swift.h",
+				"${PODS_ROOT}/Headers/Public/KMNetwork/KMNetwork.modulemap",
+				"${PODS_ROOT}/Headers/Public/KMNetwork/KMNetwork-umbrella.h",
+			);
+			name = "Copy generated compatibility header";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"${BUILT_PRODUCTS_DIR}/${PRODUCT_MODULE_NAME}.modulemap",
+				"${BUILT_PRODUCTS_DIR}/KMNetwork-umbrella.h",
+				"${BUILT_PRODUCTS_DIR}/Swift Compatibility Header/${PRODUCT_MODULE_NAME}-Swift.h",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "COMPATIBILITY_HEADER_PATH=\"${BUILT_PRODUCTS_DIR}/Swift Compatibility Header/${PRODUCT_MODULE_NAME}-Swift.h\"\nMODULE_MAP_PATH=\"${BUILT_PRODUCTS_DIR}/${PRODUCT_MODULE_NAME}.modulemap\"\n\nditto \"${DERIVED_SOURCES_DIR}/${PRODUCT_MODULE_NAME}-Swift.h\" \"${COMPATIBILITY_HEADER_PATH}\"\nditto \"${PODS_ROOT}/Headers/Public/KMNetwork/KMNetwork.modulemap\" \"${MODULE_MAP_PATH}\"\nditto \"${PODS_ROOT}/Headers/Public/KMNetwork/KMNetwork-umbrella.h\" \"${BUILT_PRODUCTS_DIR}\"\nprintf \"\\n\\nmodule ${PRODUCT_MODULE_NAME}.Swift {\\n  header \\\"${COMPATIBILITY_HEADER_PATH}\\\"\\n  requires objc\\n}\\n\" >> \"${MODULE_MAP_PATH}\"\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		ADA8A824FC0DF194C0EEA41A4A09871D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8D7002BA4BF48E276D34405B85D636DC /* AFError.swift in Sources */,
+				1AAB4E66BB2F67D75ED31A969FB90445 /* Alamofire-dummy.m in Sources */,
+				D8524A5C842C0580F42718FE94C8F791 /* Alamofire.swift in Sources */,
+				8310901E730FB822677EDAAF25893BE6 /* DispatchQueue+Alamofire.swift in Sources */,
+				C2EB4CB575EA9821E30A317574865D17 /* MultipartFormData.swift in Sources */,
+				6853624E43A5EB0CA069A0F55C3C315C /* NetworkReachabilityManager.swift in Sources */,
+				00808122820CCB7D640A23AF2F851D96 /* Notifications.swift in Sources */,
+				F9F08CA61836853CAE7455D76939D98B /* ParameterEncoding.swift in Sources */,
+				FF31B5BBE13193F204040DE66FF15F02 /* Request.swift in Sources */,
+				2CFB7E4AB44C35953034CE00C927B1F8 /* Response.swift in Sources */,
+				494BF218C4F917D55808751F21518F3F /* ResponseSerialization.swift in Sources */,
+				6A386F883B6F86FCA792C8C1134057CA /* Result.swift in Sources */,
+				51882AB1BF2D64307CB26E25DB7A43C2 /* ServerTrustPolicy.swift in Sources */,
+				AF02EA0DAD3FAC51CB5E859F81786EC6 /* SessionDelegate.swift in Sources */,
+				B560A089A1D47EC1F0B26533258C7317 /* SessionManager.swift in Sources */,
+				B422DCB989FF675D287C579D280F8253 /* TaskDelegate.swift in Sources */,
+				626863FBB1F3C943ACB548FFB7A85E8C /* Timeline.swift in Sources */,
+				3E82C4D5935E02D385D773C59D424ADD /* Validation.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AEE055BD62FF83D9271D4BBDDB635890 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5CEDE47F361B82CAEF4193331BF40E2A /* Pods-KMNetwork_Tests-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B3719419F23FDC118D6C48CE75560D82 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				ACA49CD6B7FC1F24FD2CB74D87FD7475 /* CustomExtensioon.swift in Sources */,
+				AC03817B7838E07BC3B47FD617291333 /* KMAdapter.swift in Sources */,
+				4A725B938740571970E16219327BC598 /* KMNetwork-dummy.m in Sources */,
+				723DD8C66EBDA87C25F858D3AA1FF4FD /* KMNetwork.swift in Sources */,
+				86BDAE2E25F1D209E0C5B42BA1A26FE7 /* KMNetworkConfig.swift in Sources */,
+				41020D7743021D630425427F1EC8273C /* KMRetrier.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F3BCB427C9F233FD2DBA6F64A8552BF0 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EB3221EFB2D41068A47B6B12CC15302B /* Pods-KMNetwork_Example-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		0DE59D11B3B9EDB9626233FC82C24576 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = Alamofire;
+			target = EAAA1AD3A8A1B59AB91319EE40752C6D /* Alamofire */;
+			targetProxy = 228D4571D05DA19F77F1CA660274EA84 /* PBXContainerItemProxy */;
+		};
+		76983338567DA7026DE6E38618D4BD7F /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = Alamofire;
+			target = EAAA1AD3A8A1B59AB91319EE40752C6D /* Alamofire */;
+			targetProxy = F6381613A4E6D346AFFF5D3223D26AB9 /* PBXContainerItemProxy */;
+		};
+		AD7A920198B54C3750AAF1355C39BF2A /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = KMNetwork;
+			target = 81F65A3C22716EEA9D6CD7203246036E /* KMNetwork */;
+			targetProxy = 829461E6729A2820354F4B0761C841A2 /* PBXContainerItemProxy */;
+		};
+		CBCDBFFC6E3E6939428A12F529470252 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "Pods-KMNetwork_Example";
+			target = 44C17E67771E57AD78FD2F043AA09E1D /* Pods-KMNetwork_Example */;
+			targetProxy = FBDBAE54B0A532D7D7DF36AA2027A52B /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		3C554B5E16C38021E633F4FF996F33BC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 81412F8FE7B3D9429636B00F40E0DA87 /* Alamofire.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				GCC_PREFIX_HEADER = "Target Support Files/Alamofire/Alamofire-prefix.pch";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				MODULEMAP_FILE = Headers/Public/Alamofire/Alamofire.modulemap;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PRIVATE_HEADERS_FOLDER_PATH = "";
+				PRODUCT_MODULE_NAME = Alamofire;
+				PRODUCT_NAME = Alamofire;
+				PUBLIC_HEADERS_FOLDER_PATH = "";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 5.1;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		4817F49FDA6585E2F15DF474BBEFABC4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 702F7A186452805C0DAB42D3F49F0D38 /* KMNetwork.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				GCC_PREFIX_HEADER = "Target Support Files/KMNetwork/KMNetwork-prefix.pch";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				MODULEMAP_FILE = Headers/Public/KMNetwork/KMNetwork.modulemap;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PRIVATE_HEADERS_FOLDER_PATH = "";
+				PRODUCT_MODULE_NAME = KMNetwork;
+				PRODUCT_NAME = KMNetwork;
+				PUBLIC_HEADERS_FOLDER_PATH = "";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		542789BEE5425055B1C178E226FF9EF3 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 81412F8FE7B3D9429636B00F40E0DA87 /* Alamofire.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				GCC_PREFIX_HEADER = "Target Support Files/Alamofire/Alamofire-prefix.pch";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				MODULEMAP_FILE = Headers/Public/Alamofire/Alamofire.modulemap;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PRIVATE_HEADERS_FOLDER_PATH = "";
+				PRODUCT_MODULE_NAME = Alamofire;
+				PRODUCT_NAME = Alamofire;
+				PUBLIC_HEADERS_FOLDER_PATH = "";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 5.1;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		7B81BFE060AD126FCAA776BE78A9C5C7 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = D801AF3088DFCB4AF9430EBA599D0EF9 /* Pods-KMNetwork_Example.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-KMNetwork_Example/Pods-KMNetwork_Example.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		8F17DC3A99F99FBAD606CE6963886315 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_RELEASE=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				STRIP_INSTALLED_PRODUCT = NO;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_VERSION = 5.0;
+				SYMROOT = "${SRCROOT}/../build";
+			};
+			name = Release;
+		};
+		916E0404255105F480DC4950B7625F7A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_DEBUG=1",
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				STRIP_INSTALLED_PRODUCT = NO;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+				SYMROOT = "${SRCROOT}/../build";
+			};
+			name = Debug;
+		};
+		9B65FE018C75A5F389469302840D346B /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 00A2123407A87BD8E64E4150F3169D06 /* Pods-KMNetwork_Tests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				MACH_O_TYPE = staticlib;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		C22077435125894C7B9AE96BF5658439 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8B5B3B30925BBFA34075ED9DD5E58900 /* Pods-KMNetwork_Example.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-KMNetwork_Example/Pods-KMNetwork_Example.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		CCAEC9B0236E85C72A3531867783E988 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 17EBECE4D10E03360D3E37B4FF83EDC8 /* Pods-KMNetwork_Tests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				MACH_O_TYPE = staticlib;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		DEFB67E8F6F9D08DC608B7C4D11E5A9E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 702F7A186452805C0DAB42D3F49F0D38 /* KMNetwork.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				GCC_PREFIX_HEADER = "Target Support Files/KMNetwork/KMNetwork-prefix.pch";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				MODULEMAP_FILE = Headers/Public/KMNetwork/KMNetwork.modulemap;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PRIVATE_HEADERS_FOLDER_PATH = "";
+				PRODUCT_MODULE_NAME = KMNetwork;
+				PRODUCT_NAME = KMNetwork;
+				PUBLIC_HEADERS_FOLDER_PATH = "";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		0F42AFE311C66F6A83A190D1D2205777 /* Build configuration list for PBXNativeTarget "Pods-KMNetwork_Tests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CCAEC9B0236E85C72A3531867783E988 /* Debug */,
+				9B65FE018C75A5F389469302840D346B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		20F50134A7EBE5BBF644BED665FB3400 /* Build configuration list for PBXNativeTarget "Alamofire" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3C554B5E16C38021E633F4FF996F33BC /* Debug */,
+				542789BEE5425055B1C178E226FF9EF3 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		284FE5422B8EA95A2D541740656A86CD /* Build configuration list for PBXNativeTarget "Pods-KMNetwork_Example" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C22077435125894C7B9AE96BF5658439 /* Debug */,
+				7B81BFE060AD126FCAA776BE78A9C5C7 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		4821239608C13582E20E6DA73FD5F1F9 /* Build configuration list for PBXProject "Pods" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				916E0404255105F480DC4950B7625F7A /* Debug */,
+				8F17DC3A99F99FBAD606CE6963886315 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		9674CE5BD9BBF98177CD04FCACF9014D /* Build configuration list for PBXNativeTarget "KMNetwork" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DEFB67E8F6F9D08DC608B7C4D11E5A9E /* Debug */,
+				4817F49FDA6585E2F15DF474BBEFABC4 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+}

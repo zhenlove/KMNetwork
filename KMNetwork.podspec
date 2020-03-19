@@ -27,9 +27,9 @@ TODO: Add long description of the pod here.
   s.author           = { 'zhenlove' => '121910347@qq.com' }
   s.source           = { :git => 'https://github.com/zhenlove/KMNetwork.git', :tag => s.version.to_s }
   # s.social_media_url = 'https://twitter.com/<TWITTER_USERNAME>'
-
-  s.ios.deployment_target = '8.0'
-
+  s.ios.deployment_target = '9.0'
+  s.swift_version = '5.0'
+  s.xcconfig     = { 'VALID_ARCHS' => 'armv7 arm64 x86_64', }
   s.source_files = 'KMNetwork/Classes/**/*'
   
   # s.resource_bundles = {
@@ -37,6 +37,6 @@ TODO: Add long description of the pod here.
   # }
 
   # s.public_header_files = 'Pod/Classes/**/*.h'
-  # s.frameworks = 'UIKit', 'MapKit'
-  # s.dependency 'AFNetworking', '~> 2.3'
+#   s.frameworks = 'CommonCrypto', 'MapKit'
+   s.dependency 'Alamofire'
 end
