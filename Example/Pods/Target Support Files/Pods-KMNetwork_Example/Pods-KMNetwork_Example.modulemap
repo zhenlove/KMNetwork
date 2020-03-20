@@ -1,6 +1,0 @@
-module Pods_KMNetwork_Example {
-  umbrella header "Pods-KMNetwork_Example-umbrella.h"
-
-  export *
-  module * { export * }
-}
