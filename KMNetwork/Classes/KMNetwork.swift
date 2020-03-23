@@ -9,9 +9,6 @@
 import Foundation
 import Alamofire
 
- public typealias KMURLRquestSucess = (_ response:HTTPURLResponse? ,_ reuslt : Dictionary<String, Any>? )-> Void
- public typealias KMURLRquestFailure = (_ response:HTTPURLResponse? ,_ error:Error?)-> Void
-
 @objc(KMNetwork)
 open class KMNetwork: NSObject {
      static var sessionManager: SessionManager = {
@@ -22,27 +19,38 @@ open class KMNetwork: NSObject {
     }()
 }
 
-@objc
 extension KMNetwork {
 
     @objc public static func request(url:String,
-                        method:String,
-                        parameters:[String: Any]?,
-                        isHttpBody:Bool,
-                        requestSucess sucess:@escaping KMURLRquestSucess,
-                        requestFailure failure:@escaping KMURLRquestFailure) -> Void {
-        KMNetwork
-        .sessionManager
-        .request(url, method: HTTPMethod(rawValue: method) ?? .get, parameters: parameters, encoding: isHttpBody ? JSONEncoding.default : URLEncoding.default)
-        .validateDataStatus(statusCode: [5,-5])
-        .responseJSON { (dataResponse) in
-                if dataResponse.result.isSuccess{
-                    sucess(dataResponse.response,dataResponse.result.value as? Dictionary<String, Any>)
-                }
-                if dataResponse.result.isFailure{
-                    failure(dataResponse.response,dataResponse.result.error)
+                                     method:String,
+                                     parameters:[String: Any]?,
+                                     isHttpBody:Bool,
+                                     callBack:@escaping (Any?,Error?)-> Void) -> Void {
+            KMNetwork
+            .sessionManager
+            .request(url, method: HTTPMethod(rawValue: method) ?? .get, parameters: parameters, encoding: isHttpBody ? JSONEncoding.default : URLEncoding.default)
+            .validateDataStatus(statusCode: [5,-5])
+            .responseJSON { (dataResponse) in
+                callBack(dataResponse.result.value,dataResponse.result.error)
+            }
+        }
+    
+    @objc public static func upload(url:String,
+                                    imageData: Data,
+                                    callBack:@escaping (Any?,Error?)-> Void) -> Void {
+            KMNetwork
+            .sessionManager
+            .upload(multipartFormData: { (data) in
+                data.append(imageData, withName: String.generateRandomString(5) + Date.timeIntervalBetween1970AndReferenceDate.description, mimeType: "image/jpeg")
+            }, to: url) { (result) in
+                switch result {
+                case .success(let upload,_,_):
+                    upload.responseJSON { (dataResponse) in
+                        callBack(dataResponse.result.value,nil)
+                    }
+                case .failure(let encodingError):
+                    callBack(nil,encodingError)
                 }
         }
     }
 }
-
