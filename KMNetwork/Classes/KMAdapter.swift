@@ -12,12 +12,10 @@ class KMAdapter: RequestAdapter {
     
     func adapt(_ urlRequest: URLRequest) throws -> URLRequest {
             var urlRequest = urlRequest
-            let noncestr = String.generateRandomString(10)
-            let sign = String.sign(KMServiceModel.default.apptoken,KMServiceModel.default.usertoken, KMServiceModel.default.appKey, noncestr)
             urlRequest.setValue(KMServiceModel.default.apptoken, forHTTPHeaderField: "apptoken")
             urlRequest.setValue(KMServiceModel.default.usertoken, forHTTPHeaderField: "usertoken")
-            urlRequest.setValue(noncestr, forHTTPHeaderField: "noncestr")
-            urlRequest.setValue(sign, forHTTPHeaderField: "sign")
+            urlRequest.setValue(KMServiceModel.default.noncestr, forHTTPHeaderField: "noncestr")
+            urlRequest.setValue(KMServiceModel.default.sign, forHTTPHeaderField: "sign")
             return urlRequest
     }
 }

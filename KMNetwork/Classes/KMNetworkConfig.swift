@@ -174,6 +174,7 @@ open class KMServiceModel: NSObject {
     @objc public var appSecret:String!{ get{ KMServiceModel.AppSecret }}
     @objc public var appKey:String!{ get{ KMServiceModel.AppKey }}
     @objc public var orgId:String!{ get{ KMServiceModel.OrgId }}
+    
     @objc public var baseURL:String!{ get{ BaseUrl.setEnvironment(KMServiceModel.Environment) }}
     @objc public var doctorBaseUrl:String!{ get{ DoctorBaseUrl.setEnvironment(KMServiceModel.Environment) }}
     @objc public var commonBaseUrl:String!{ get{ CommonBaseUrl.setEnvironment(KMServiceModel.Environment) }}
@@ -181,7 +182,16 @@ open class KMServiceModel: NSObject {
     @objc public var fileStoreUrl:String!{ get{ FileStoreUrl.setEnvironment(KMServiceModel.Environment) }}
     @objc public var drugstoreBaseUrl:String!{ get{ DrugstoreBaseUrl.setEnvironment(KMServiceModel.Environment) }}
     @objc public var remoteAuditUrl:String!{ get{ RemoteAuditUrl.setEnvironment(KMServiceModel.Environment) }}
-
+    
+    
+    private var nonce:String!
+    @objc public var noncestr:String!{
+        get{
+            nonce = String.generateRandomString(10)
+            return nonce
+        }
+    }
+    @objc public var sign:String!{ get{ String.sign(apptoken,usertoken, appKey, nonce)}}
 
     static let `default`: KMServiceModel = { return KMServiceModel() }()
     
