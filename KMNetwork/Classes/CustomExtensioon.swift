@@ -64,86 +64,49 @@ extension String  {
     
 }
 
-
-extension Request {
-    public static func serializeResponseObject<T:Codable>(
-        encoding: String.Encoding?,
-        response: HTTPURLResponse?,
-        data: Data?,
-        error: Error?)
-        -> Result<T>
-    {
-        guard error == nil else { return .failure(error!) }
-        //
-        // if let response = response, emptyDataStatusCodes.contains(response.statusCode) { return .success("") }
-        //
-        guard let validData = data else {
-            return .failure(AFError.responseSerializationFailed(reason: .inputDataNil))
-        }
-        
-        var convertedEncoding = encoding
-        
-        if let encodingName = response?.textEncodingName as CFString?, convertedEncoding == nil {
-            convertedEncoding = String.Encoding(rawValue: CFStringConvertEncodingToNSStringEncoding(
-                CFStringConvertIANACharSetNameToEncoding(encodingName))
-            )
-        }
-        
-        let actualEncoding = convertedEncoding ?? .isoLatin1
-        
-        if let string = String(data: validData, encoding: actualEncoding) {
-            let data = string.data(using: String.Encoding.utf8)
-            if let decoded =  try? JSONDecoder().decode(T.self, from: data!){
-                return .success(decoded)
-            }else{
-                return .failure(error!)
-            }
-        } else {
-            return .failure(AFError.responseSerializationFailed(reason: .stringSerializationFailed(encoding: actualEncoding)))
-        }
-    }
-}
-
- extension DataRequest {
-    
-    public static func objectResponseSerializer<T:Codable>(encoding: String.Encoding? = nil ) -> DataResponseSerializer<T> {
-        return DataResponseSerializer<T> { _, response, data, error in
-            return Request.serializeResponseObject(encoding: encoding, response: response, data: data, error: error)
-        }
-    }
-    
-    @discardableResult
-    public func responseObject<T:Codable>(
-        queue: DispatchQueue? = nil,
-        encoding: String.Encoding? = nil,
-        completionHandler: @escaping (DataResponse<T>) -> Void)
-        -> Self {
-            return response(
-                queue: queue,
-                responseSerializer: DataRequest.objectResponseSerializer(encoding: encoding),
-                completionHandler: completionHandler
-            )
-    }
-    
-    @discardableResult
-    public func validateDataStatus(statusCode acceptableStatusCodes: [Int]) -> Self {
-        
-        
-        validate { (request, response, data) -> Request.ValidationResult in
-            struct KMBaseClass: Codable{
-                let Msg : String?
-                let Status : Int?
-            }
-            if let theData = data {
-                let rootModel = try? JSONDecoder().decode(KMBaseClass.self, from: theData)
-                if let status = rootModel?.Status {
-                    if acceptableStatusCodes.contains(status) {
-                        return .failure(AFError.responseValidationFailed(reason: .unacceptableStatusCode(code: status)))
-                    }
-                }
-            }
-            return .success
-        }
-    }
-    
-}
+ public extension DataRequest {
+    static func objectResponseSerializer<T: Codable>(_ type: T.Type, _ encoding: String.Encoding? = nil) -> DataResponseSerializer<T> {
+         return DataResponseSerializer { (_, response, data, error) -> Result<T> in
+             let result = Request.serializeResponseData(response: response, data: data, error: error)
+             switch result {
+             case .success(let valiData):
+                 do {
+                     return .success(try JSONDecoder().decode(T.self, from: valiData))
+                 } catch {
+                     return .failure(error)
+                 }
+             case .failure(let error):
+                 return .failure(error)
+             }
+         }
+     }
+     
+     @discardableResult
+     public func responseObject<T: Codable>(
+         _ type: T.Type,
+         queue: DispatchQueue? = nil,
+         encoding: String.Encoding? = nil,
+         completionHandler: @escaping (DataResponse<T>) -> Void)
+         -> Self {
+         return response(queue: queue, responseSerializer: DataRequest.objectResponseSerializer(type, encoding), completionHandler: completionHandler)
+     }
+     
+     @discardableResult
+     public func validateDataStatus(statusCode acceptableStatusCodes: [Int]) -> Self {
+         validate { (_, _, data) -> Request.ValidationResult in
+             struct KMBaseClass: Codable {
+                 let Msg: String?
+                 let Status: Int?
+             }
+             if let theData = data {
+                 let rootModel = try? JSONDecoder().decode(KMBaseClass.self, from: theData)
+                 if let status = rootModel?.Status {
+                     if acceptableStatusCodes.contains(status) {
+                         return .failure(AFError.responseValidationFailed(reason: .unacceptableStatusCode(code: status)))
+                     }
+                 }
+             }
+             return .success
+         }
+     }
+ }

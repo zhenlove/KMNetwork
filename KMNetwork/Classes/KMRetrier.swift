@@ -33,13 +33,13 @@ extension InternalRequest {
         
         Alamofire
         .request(serviceString, method: .get, parameters: paramsDict)
-        .responseObject { (dataResponse : DataResponse<RootClass<TokenModel>>) in
-            if let data = dataResponse.result.value?.Data {
-                KMServiceModel.default.apptoken = data.Token;
-                callBack(true)
-            }else{
-                callBack(false)
-            }
+        .responseObject(RootClass<TokenModel>.self) { dataResponse in
+        if let data = dataResponse.result.value?.Data {
+            KMServiceModel.default.apptoken = data.Token;
+            callBack(true)
+        }else{
+            callBack(false)
+        }
         }
     }
 }

@@ -11,7 +11,7 @@ import Alamofire
 
 @objc(KMNetwork)
 open class KMNetwork: NSObject {
-     static var sessionManager: SessionManager = {
+     public static var sessionManager: SessionManager = {
         let tSessionManager = SessionManager.default
         tSessionManager.adapter = KMAdapter()
         tSessionManager.retrier = KMRetrier()
