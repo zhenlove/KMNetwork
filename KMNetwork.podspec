@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'KMNetwork'
-  s.version          = '0.1.5'
+  s.version          = '0.1.6'
   s.summary          = 'A short description of KMNetwork.'
 
 # This description is used to generate tags and improve search results.
@@ -38,5 +38,5 @@ TODO: Add long description of the pod here.
 
   # s.public_header_files = 'Pod/Classes/**/*.h'
 #   s.frameworks = 'CommonCrypto', 'MapKit'
-   s.dependency 'Alamofire'
+   s.dependency 'Alamofire','4.9.1'
 end

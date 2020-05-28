@@ -1,7 +1,7 @@
 PODS:
   - Alamofire (4.9.1)
-  - KMNetwork (0.1.1):
-    - Alamofire
+  - KMNetwork (0.1.5):
+    - Alamofire (= 4.9.1)
 
 DEPENDENCIES:
   - KMNetwork (from `../`)
@@ -16,7 +16,7 @@ EXTERNAL SOURCES:
 
 SPEC CHECKSUMS:
   Alamofire: 85e8a02c69d6020a0d734f6054870d7ecb75cf18
-  KMNetwork: 10f0daf08e5c5b22534da2c9aa835d26165bc549
+  KMNetwork: d874681b6a264449a3438477749a90755af1985c
 
 PODFILE CHECKSUM: d67680f16fcc62fee56978b79598609bdf723c21
 
