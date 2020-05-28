@@ -200,16 +200,18 @@ open class KMServiceModel: NSObject {
         return `default`
     }
 
+    @discardableResult
     @objc public static func setupParameter(appid:String,
                                             appsecret:String,
                                             appkey:String,
                                             orgid:String,
-                                            environment:Environment) {
+                                            environment:Environment) -> Bool {
         AppId = appid
         AppSecret = appsecret
         AppKey = appkey
         OrgId = orgid
         Environment = environment
+        return true
     }
 
 }

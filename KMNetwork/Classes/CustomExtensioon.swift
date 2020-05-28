@@ -82,7 +82,7 @@ extension String  {
      }
      
      @discardableResult
-     public func responseObject<T: Codable>(
+    func responseObject<T: Codable>(
          _ type: T.Type,
          queue: DispatchQueue? = nil,
          encoding: String.Encoding? = nil,
@@ -92,7 +92,7 @@ extension String  {
      }
      
      @discardableResult
-     public func validateDataStatus(statusCode acceptableStatusCodes: [Int]) -> Self {
+    func validateDataStatus(statusCode acceptableStatusCodes: [Int]) -> Self {
          validate { (_, _, data) -> Request.ValidationResult in
              struct KMBaseClass: Codable {
                  let Msg: String?
