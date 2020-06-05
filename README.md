@@ -1,6 +1,6 @@
 # KMNetwork
 
-[![CI Status](https://img.shields.io/travis/zhenlove/KMNetwork.svg?style=flat)](https://travis-ci.org/zhenlove/KMNetwork)
+[![CI Status](https://img.shields.io/travis/zhenlove/KMNetwork.svg?style=flat)](https://travis-ci.com/zhenlove/KMNetwork)
 [![Version](https://img.shields.io/cocoapods/v/KMNetwork.svg?style=flat)](https://cocoapods.org/pods/KMNetwork)
 [![License](https://img.shields.io/cocoapods/l/KMNetwork.svg?style=flat)](https://cocoapods.org/pods/KMNetwork)
 [![Platform](https://img.shields.io/cocoapods/p/KMNetwork.svg?style=flat)](https://cocoapods.org/pods/KMNetwork)

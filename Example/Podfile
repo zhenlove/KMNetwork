@@ -1,4 +1,6 @@
 #use_frameworks!
+source 'https://gitee.com/zhenlove/zhenSpecs.git'
+source 'https://cdn.cocoapods.org/'
 platform :ios, '9.0'
 target 'KMNetwork_Example' do
   pod 'KMNetwork', :path => '../'
